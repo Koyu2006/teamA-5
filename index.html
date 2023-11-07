@@ -24,7 +24,7 @@
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#works">Works</a></li>
+          <li><a href="#works">Tourist Spot</a></li>
           <li><a href="#news">News</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -35,7 +35,7 @@
       <!-- main -->
       <div id="mainvisual">
         <picture>
-          <source media="(max-width: 600px)" srcset="img/top.jpg">
+          <source media="(max-width: 600px)" srcset="./img/main-sp.jpg">
           <img src="img/top.jpg" alt="テキストテキストテキスト">
         </picture>
       </div>
@@ -48,7 +48,6 @@
           <li>観光甲子園出場チームとして設立
           </li>
           <li>2022･2023観光甲子園に出場しました。</li>
-          <li>メールアドレス：xxxxxxx@xxx.com</li>
         </ul>
         <p>
           こちらのサイトでは私たちの地元である「練馬」の魅力を最大限お届けします‼
@@ -85,19 +84,21 @@
           <dd>明日は模試です。こんなことをしている場合ではないですねｗ</dd>
         </dl>
       </section>
+
       <!-- Contact -->
       <section id="contact" class="wrapper">
         <h2 class="sec-title">Contact</h2>
         <p>お問い合わせは以下のフォームから
         </p>
-        <form action="#" method="post">
+        <form action="https://api.staticforms.xyz/submit" method="post">
+          <input type="hidden" name="accessKey" value="1146066a-a0aa-4e4f-8eb6-804bae0427ca"> <!-- Required -->
           <dl>
             <dt><label for="name">お名前</label></dt>
-            <dd><input type="text" id="name"></dd>
+            <dd><input type="text" name="name"></dd>
             <dt><label for="email">メールアドレス</label></dt>
-            <dd><input type="email" id="email"></dd>
+            <dd><input type="email" name="email"></dd>
             <dt><label for="name">内容</label></dt>
-            <dd><textarea id="content" cols="30" rows="10"></textarea></dd>
+            <dd><textarea name="message" cols="30" rows="10"></textarea></dd>
           </dl>
           <div class="button"><input type="submit" value="送信"></div>
         </form>
