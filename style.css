@@ -57,7 +57,7 @@ li {
 .sec-title {
   font-size: 1.5rem;
   text-align: center;
-  margin-bottom: 65px;
+  margin-bottom: 20px;
 }
 
 /*----------------------------------------------
@@ -133,6 +133,7 @@ About
 /*-------------------------------------------
 Works
 -------------------------------------------*/
+
 #works ul {
   display: flex;
   justify-content: space-between;
