@@ -98,6 +98,8 @@ header li a {
   width: 30px;
 }
 
+
+
 /*-------------------------------------------
 Mainvisual
 -------------------------------------------*/
@@ -108,7 +110,7 @@ Mainvisual
 #mainvisual img {
   width: 100%;
   max-width: 1920px;
-  height: 400px;
+  height: 600px;
   object-fit: cover;
 }
 
@@ -131,60 +133,45 @@ About
   text-align: justify;
 }
 
-.cp_box *, .cp_box *:before, .cp_box *:after {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+.readmore { /*続きを読む*/
+  position: relative;
+  margin: 3em auto;
+  display: block;
+  color:black;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  background: none;
+  letter-spacing: 0.1em;
 }
-.cp_box {
-	position: relative;
-  margin-bottom: 70px;
+
+.readmore:before { /*丸の形*/
+  content: "";
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto .5em;
+  background: url(img/arrow.png) no-repeat center / 20px rgb(200, 200, 200);
+  transition: .3s;
 }
-.cp_box label {
-	position: absolute;
-	z-index: 1;
-	bottom: 0;
-	width: 100%;
-	cursor: pointer;
-	text-align: center;
-	}
-.cp_box input:checked + label {
-	background: inherit; /* 開いた時にグラデーションを消す */
+.readmore.on-click:before {
+transform: rotate(180deg);
 }
-.cp_box label:after {
-	line-height: 2.5rem;
-	position: absolute;
-	z-index: 2;
-	bottom: 20px;
-	left: 50%;
-	width: 16rem;
-	font-family: FontAwesome;
-	content: '続きをよむ';
-	transform: translate(-50%, 0);
-	letter-spacing: 0.05em;
-	color: #ffffff;
-	border-radius: 20px;
-	background-color: rgba(27, 37, 56, 1);
+.readmore .open {
+display: block;
 }
-.cp_box input {
-	display: none;
+.readmore.on-click .open {
+display: none;
 }
-.cp_box .cp_container {
-	overflow: hidden;
-	height: 230px; /* 開く前に見えている部分の高さ */
-	transition: all 0.5s;
+.readmore .close {
+display: none;
 }
-.cp_box input:checked + label {
-	/* display: none ; 閉じるボタンを消す場合解放 */
+.readmore.on-click .close {
+display: block;
 }
-.cp_box input:checked + label:after {
-	font-family: FontAwesome;
-	content: '閉じる';
-}
-.cp_box input:checked ~ .cp_container {
-	height: auto;
-	padding-bottom: 80px; /* 閉じるボタンのbottomからの位置 */
-	transition: all 0.5s;
-}
+
 /*-------------------------------------------
 Works
 -------------------------------------------*/
@@ -198,7 +185,7 @@ Works
 
 #works ul li {
   width: 31%;
-  margin-bottom: 23px;
+  margin-bottom: 0px;
 }
 
 #works ul li img {
